@@ -7,6 +7,11 @@ interface Props {
 
 const { currentPath } = Astro.props;
 const lang = getCurrentLanguage();
+
+const base = import.meta.env.BASE_URL;
+
+const isActive = (path: string) =>
+  currentPath === path || currentPath.startsWith(path + '/');
 ---
 
 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -16,16 +21,47 @@ const lang = getCurrentLanguage();
 </button>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="/" class={currentPath === '/' ? 'active' : ''}>{t('home', lang)}</a>
-  <a href="/projects" class={currentPath === '/projects' ? 'active' : ''}>{t('projects', lang)}</a>
-  <a href="/about" class={currentPath === '/about' ? 'active' : ''}>{t('about', lang)}</a>
-  <a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>{t('contact', lang)}</a>
-  
+  <a
+    href={base}
+    class={isActive('/portfolio/') || isActive('/') ? 'active' : ''}
+  >
+    {t('home', lang)}
+  </a>
+
+  <a
+    href={`${base}projects`}
+    class={isActive('/projects') || isActive('/portfolio/projects') ? 'active' : ''}
+  >
+    {t('projects', lang)}
+  </a>
+
+  <a
+    href={`${base}about`}
+    class={isActive('/about') || isActive('/portfolio/about') ? 'active' : ''}
+  >
+    {t('about', lang)}
+  </a>
+
+  <a
+    href={`${base}contact`}
+    class={isActive('/contact') || isActive('/portfolio/contact') ? 'active' : ''}
+  >
+    {t('contact', lang)}
+  </a>
+
   <div class="menu-divider"></div>
-  
-  <a href="https://github.com/LasperKaine" target="_blank" rel="noopener">{t('github', lang)}</a>
-  <a href="https://www.linkedin.com/in/kasper-laine-a4a131231/" target="_blank" rel="noopener">{t('linkedin', lang)}</a>
-  <a href="/resume.pdf" target="_blank" rel="noopener">{t('resume', lang)}</a>
+
+  <a href="https://github.com/LasperKaine" target="_blank" rel="noopener">
+    {t('github', lang)}
+  </a>
+
+  <a href="https://www.linkedin.com/in/kasper-laine-a4a131231/" target="_blank" rel="noopener">
+    {t('linkedin', lang)}
+  </a>
+
+  <a href={`${base}resume.pdf`} target="_blank" rel="noopener">
+    {t('resume', lang)}
+  </a>
 </div>
 
 <script is:inline>
