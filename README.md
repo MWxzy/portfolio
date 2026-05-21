@@ -36,7 +36,10 @@ This website is built using:
 
 ## Live Demo
 
-Check out the portfolio live: [https://kasper-laine-portfolio.vercel.app/](https://kasper-laine-portfolio.vercel.app/)
+Check out the portfolio live:
+
+- **Vercel:** [https://kasper-laine-portfolio.vercel.app/](https://kasper-laine-portfolio.vercel.app/)
+- **GitHub Pages:** [https://lasperkaine.github.io/portfolio/](https://lasperkaine.github.io/portfolio/)
 
 ---
 
