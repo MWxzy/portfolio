@@ -181,12 +181,3 @@ main {
 [data-theme="light"] .looking-for-list li:before {
   color: var(--accent) !important;
 }
-
-.language-switcher label {
-  color: #1a1a1a !important;
-  background-color: transparent !important;
-}
-
-[data-theme="light"] .language-switcher label {
-  color: #1a1a1a !important;
-}
