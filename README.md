@@ -10,7 +10,7 @@ This site is a curated collection of my projects, experiences, and skills as a d
 Hi! I’m **Kasper Laine** – a passionate web developer who loves building beautiful, functional, and accessible digital experiences.
 
 - **Location:** [Helsinki]
-- **Expertise:** Front-End Development, UI Engineering, Responsive Design
+- **Expertise:** Fullstack Development, UI Engineering, Responsive Design
 - **Interests:** Web technologies, creative coding, and turning ideas into reality
 
 ---
