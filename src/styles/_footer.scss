@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'mixins';
+
+/* FOOTER */
+
+.footer {
+  background: $color-dark-bg;
+  border-top: 1px solid $color-border-light;
+  margin-top: 4rem;
+  padding: 2rem $spacing-md;
+  color: $color-text-primary;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-content {
+  flex: 1;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: $font-size-xl;
+  color: $color-accent;
+  font-family: $font-retro;
+  letter-spacing: 0.1em;
+}
+
+.footer-tagline {
+  margin: 0.25rem 0 0;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  a {
+    color: $color-text-primary;
+    text-decoration: none;
+    font-size: $font-size-sm;
+    transition: color $transition-smooth;
+
+    &:hover {
+      color: $color-accent;
+      text-shadow: 0 0 8px $color-accent;
+    }
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid $color-border-transparent;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #8B6FA6;
+  margin: 0;
+}

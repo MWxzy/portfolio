@@ -229,19 +229,6 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
     </section>
   </section>
 
-  <style>
-    .project-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: auto;
-    }
-
-    .project-links a {
-      width: 100%;
-    }
-  </style>
-
   <script is:inline define:vars={{ projectsData, base }}>
     function updateProjects() {
       const lang = localStorage.getItem("language") || "en";

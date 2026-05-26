@@ -1,0 +1,91 @@
+@import 'variables';
+@import 'mixins';
+
+/* NAVBAR */
+
+.navbar {
+  background: $color-dark-bg;
+  border-bottom: 1px solid $color-border-light;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow-sm;
+}
+
+.nav-container {
+  @include flex-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md 2rem;
+  gap: 2rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  color: $color-text-primary;
+  text-shadow: 0 0 10px $color-accent;
+  min-width: fit-content;
+}
+
+.logo-text {
+  color: $color-accent;
+  font-family: $font-retro;
+  letter-spacing: 0.1em;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+
+  a {
+    color: $color-text-primary;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color $transition-smooth, text-shadow $transition-smooth;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &.active {
+      color: $color-accent;
+      text-shadow: 0 0 8px $color-accent;
+      border-bottom-color: $color-accent;
+    }
+  }
+}
+
+.nav-socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  a {
+    color: $color-text-primary;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color $transition-smooth, text-shadow $transition-smooth;
+
+    &:hover {
+      color: $color-accent;
+      text-shadow: 0 0 8px $color-accent;
+    }
+  }
+}
+
+.resume-link {
+  padding: 6px 12px;
+  border: 1px solid $color-shadow-light;
+  border-radius: $radius-sm;
+  background: transparent;
+  transition: background $transition-smooth, border-color $transition-smooth;
+
+  &:hover {
+    background: rgba(157, 80, 255, 0.07);
+    border-color: $color-accent-light;
+  }
+}

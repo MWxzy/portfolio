@@ -1,0 +1,131 @@
+// FLEX UTILITIES
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// CARD STYLES
+@mixin card-base {
+  background: $color-card-bg;
+  border: 1px solid $color-border-lighter;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  transition: border-color $transition-smooth, box-shadow $transition-smooth;
+}
+
+@mixin card-hover {
+  border-color: $color-accent;
+  box-shadow: 0 0 20px $color-shadow;
+}
+
+// BUTTON STYLES
+@mixin button-base {
+  padding: 12px 24px;
+  border: none;
+  border-radius: $radius-md;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+  transition: background $transition-smooth, box-shadow $transition-smooth;
+  display: inline-block;
+  font-size: 14px;
+}
+
+@mixin button-purple {
+  @include button-base;
+  background: linear-gradient(90deg, $color-accent 0%, #6E36BC 100%);
+  color: #fff;
+  box-shadow: 0 0 12px $color-shadow;
+
+  &:hover {
+    background: linear-gradient(90deg, $color-accent-hover 0%, $color-accent-light 100%);
+    box-shadow: 0 0 24px $color-glow;
+  }
+}
+
+@mixin button-ghost {
+  @include button-base;
+  color: $color-text-primary;
+  border: 1px solid $color-shadow-light;
+  box-shadow: 0 0 10px $color-shadow-light;
+  background: transparent;
+  transition: border-color $transition-smooth, box-shadow $transition-smooth, color $transition-smooth;
+
+  &:hover {
+    border-color: $color-accent-light;
+    box-shadow: 0 0 18px rgba(207, 113, 252, 0.2);
+    color: #A259F7;
+  }
+}
+
+// TEXT STYLES
+@mixin text-glitch {
+  color: $color-accent;
+  letter-spacing: 0.09em;
+  font-size: $font-size-4xl;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 8px $color-accent, 1px 2px 1px #fff2, -2px 4px rgba(59, 1, 77, 0.4);
+}
+
+@mixin section-title {
+  font-family: $font-retro;
+  letter-spacing: 0.1em;
+  margin-bottom: $spacing-xl;
+  color: $color-accent;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+// GRID UTILITIES
+@mixin grid-auto-fit($min-width: 200px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $spacing-lg;
+}
+
+// RESPONSIVE UTILITIES
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == 'xl' {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+// VISUALLY HIDDEN (Screen reader only)
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'mixins';
+
+/* UTILITIES */
+
+.centerwrap {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 2rem;
+}
+
+.glitch {
+  @include text-glitch;
+}
+
+.section-title {
+  @include section-title;
+}
+
+.section-tag {
+  font-size: $font-size-sm;
+  color: #bfa8ef;
+  letter-spacing: 0.06em;
+}
+
+.section-subtitle {
+  color: $color-text-secondary;
+  margin-top: 0;
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.subtitle {
+  margin-bottom: 2em;
+  color: $color-text-secondary;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.meta {
+  color: $color-text-secondary;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.meta-label {
+  color: #a78bfa;
+  font-weight: $font-weight-semi-bold;
+}

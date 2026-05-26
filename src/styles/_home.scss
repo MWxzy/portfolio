@@ -1,0 +1,176 @@
+@import 'variables';
+@import 'mixins';
+
+/* HOME PAGE */
+
+.hero {
+  min-height: 70vh;
+  @include flex-center;
+  padding: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-subtitle {
+  font-size: $font-size-2xl;
+  color: $color-text-secondary;
+  margin: $spacing-md 0;
+  font-weight: $font-weight-normal;
+}
+
+.hero-desc {
+  font-size: $font-size-lg;
+  color: $color-text-tertiary;
+  line-height: 1.6;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* QUICK FACTS */
+
+.quick-facts {
+  background: linear-gradient(135deg, $color-card-bg 0%, #20112b 100%);
+  border-top: 1px solid $color-border-light;
+  border-bottom: 1px solid $color-border-light;
+  padding: $spacing-2xl 2rem;
+  margin: 2rem 0;
+}
+
+.facts-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.fact {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $radius-lg;
+  min-height: 180px;
+  justify-content: center;
+  transition: all $transition-smooth;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(167, 139, 250, 0.1);
+    border-color: rgba(167, 139, 250, 0.3);
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.fact-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+  transition: transform $transition-smooth, stroke $transition-smooth;
+  stroke: #a78bfa;
+
+  .fact:hover & {
+    transform: scale(1.1);
+    stroke: #c4b5fd;
+  }
+}
+
+.fact-main {
+  color: #a78bfa;
+  font-size: 16px;
+  font-weight: $font-weight-semi-bold;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.fact-sub {
+  color: #9ca3af;
+  font-size: 14px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact-number {
+  font-size: $font-size-3xl;
+  color: $color-accent;
+  margin: 0;
+  font-weight: $font-weight-bold;
+}
+
+.fact-label {
+  color: $color-text-secondary;
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* CTA SECTION */
+
+.cta-section {
+  padding: $spacing-2xl 2rem;
+  text-align: center;
+}
+
+.cta-box {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid $color-shadow-light;
+  border-radius: $radius-lg;
+  background: $color-card-bg;
+
+  h2 {
+    color: $color-accent;
+    margin-top: 0;
+  }
+
+  p {
+    color: $color-text-tertiary;
+    font-size: 1.05rem;
+  }
+}
+
+@include respond-to('md') {
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+}
+
+@include respond-to('sm') {
+  .facts-grid {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+
+  .fact {
+    min-height: 150px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+}
