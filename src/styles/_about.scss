@@ -1,0 +1,137 @@
+@import 'variables';
+@import 'mixins';
+
+/* ABOUT PAGE */
+
+.about-page {
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin: $spacing-2xl 0;
+
+  h2 {
+    color: $color-accent;
+    border-bottom: 2px solid #6E36BC;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: $color-text-tertiary;
+    line-height: 1.7;
+    margin: $spacing-md 0;
+  }
+
+  a {
+    color: $color-accent-lighter;
+    text-decoration: none;
+    transition: color $transition-smooth;
+    border-bottom: 1px solid $color-accent-lighter;
+
+    &:hover {
+      color: #c4b5fd;
+      border-bottom-color: #c4b5fd;
+    }
+  }
+}
+
+.tech-grid {
+  @include grid-auto-fit(200px);
+}
+
+.tech-card {
+  @include card-base;
+  text-align: center;
+
+  h3 {
+    color: $color-accent;
+    margin-top: 0;
+  }
+
+  p {
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+    margin: 0;
+  }
+}
+
+.looking-for-list {
+  list-style: none;
+  padding: 0;
+  color: $color-text-tertiary;
+
+  li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+
+    &:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: $color-accent;
+    }
+  }
+}
+
+.experience-item {
+  background: $color-card-bg;
+  border-left: 3px solid $color-accent;
+  padding: $spacing-lg;
+  border-radius: $radius-md;
+  margin: $spacing-md 0;
+
+  h3 {
+    color: $color-accent;
+    margin-top: 0;
+  }
+}
+
+.exp-company {
+  color: $color-text-muted;
+  font-style: italic;
+  margin: 0.25rem 0;
+}
+
+.exp-desc {
+  color: $color-text-secondary;
+  margin: 0.75rem 0 0;
+}
+
+.connect-buttons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+@include respond-to('md') {
+  .about-page {
+    padding: $spacing-md;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include respond-to('sm') {
+  .about-page {
+    padding: $spacing-sm;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-buttons {
+    flex-direction: column;
+  }
+}

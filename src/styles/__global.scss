@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=VT323&display=swap');
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-dark-bg;
+  color: $color-text-primary;
+  font-family: $font-mono;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
+
+h1, h2, h3 {
+  font-family: $font-retro;
+  margin-bottom: 0.5em;
+}
+
+h2, h3 {
+  letter-spacing: 0.08em;
+}

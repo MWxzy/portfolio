@@ -1,6 +1,8 @@
 ---
 import Navbar from "../navbar.astro";
 import Footer from "../footer.astro";
+import '@/styles/main.scss';
+import '@/styles/theme.scss';
 
 const base = import.meta.env.BASE_URL;
 
@@ -44,9 +46,6 @@ const {
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
     <link rel="apple-touch-icon" href={`${base}favicon.ico`} />
-
-    <link rel="stylesheet" href={`${base}main.css`} />
-    <link rel="stylesheet" href={`${base}theme.css`} />
   </head>
 
   <body>
@@ -83,13 +82,13 @@ const {
           languages: "English / Finnish",
           languagesLabel: "Languages",
           heroDesc:
-            "Helsinki-based web and software developer with hands-on experience in IT support, digital solutions, and collaborative projects. Currently studying Software Development at Metropolia University of Applied Sciences, focusing on practical software engineering and modern web technologies. I'm always learning and looking for ways to build better solutions.",
+            "Helsinki-based web and software developer with hands-on experience in IT support, digital solutions, and collaborative projects. Currently studying Software Development at Metropolia [...]",
 
           // About page
           aboutTitle: "About",
           whoIAm: "Who I am",
           whoIAmDesc:
-            "I'm a web and software developer in Helsinki with practical working experience in IT support, digital projects, and content management. Currently, I'm completing my Engineering degree from a University of Applied Sciences in Software Development at Metropolia University of Applied Sciences.",
+            "I'm a web and software developer in Helsinki with practical working experience in IT support, digital projects, and content management. Currently, I'm completing my Engineering degree[...]",
           passionate:
             "I'm passionate about efficient solutions, clear documentation, teamwork, and genuinely helping users and businesses with technology.",
           location: "Location",
@@ -127,7 +126,7 @@ const {
           fullStackDeveloper: "Full Stack Software Developer",
           alfonDigital: "Alfons Digital Oy",
           alfonDesc:
-            "Worked on a variety of WordPress development tasks, building and customizing websites using WordPress, React, PHP, Tailwind CSS, and Git. Contributed to both frontend and backend features, and handled development workflows with NPM. Demonstrated strong independence and problem-solving skills, with the ability to quickly learn new technologies and adapt to project requirements. Received positive feedback for technical competence and work attitude.",
+            "Worked on a variety of WordPress development tasks, building and customizing websites using WordPress, React, PHP, Tailwind CSS, and Git. Contributed to both frontend and backend fea[...]",
           itSupportRole: "IT Support (Digitalkkari)",
           helsinkiCity: "Helsingin kaupunki",
           itSupportDesc:
@@ -139,7 +138,7 @@ const {
             "Professional work from my internship at Alfons Digital, plus personal and group projects on GitHub.",
           professionalWork: "Professional Work",
           professionalWorkDesc:
-            "Projects from my fullstack developer internship at Alfons Digital (January – May 2024). Built WordPress sites with React components, custom post types, and modern frontend technologies.",
+            "Projects from my fullstack developer internship at Alfons Digital (January – May 2024). Built WordPress sites with React components, custom post types, and modern frontend technolo[...]",
           personalProjects: "Personal Projects",
           groupProjects: "Group Projects",
           additionalClients: "Additional Client Work",
@@ -190,12 +189,12 @@ const {
           languages: "Englanti / Suomi",
           languagesLabel: "Kielet",
           heroDesc:
-            "Helsinki-pohjainen web- ja ohjelmistokehittäjä, jolla on käytännön kokemusta IT-tuesta, digitaalisista ratkaisuista ja yhteistyöprojekteista. Opiskelen tällä hetkellä ohjelmistokehitystä Metropolia Ammattikorkeakoulussa, keskittyen käytännölliseen ohjelmistotuotantoon ja moderniin verkkoteknologiaan. Olen aina oppimassa ja etsimässä tapoja rakentaa parempia ratkaisuja.",
+            "Helsinki-pohjainen web- ja ohjelmistokehittäjä, jolla on käytännön kokemusta IT-tuesta, digitaalisista ratkaisuista ja yhteistyöprojekteista. Opiskelen tällä hetkellä ohjelm[...]",
 
           aboutTitle: "Tietoja",
           whoIAm: "Kuka olen",
           whoIAmDesc:
-            "Olen web- ja ohjelmistokehittäjä Helsingissä, jolla on käytännön työkokemus IT-tuesta, digitaalisista projekteista ja sisällönhallinnasta. Tällä hetkellä suoritan insinöörin tutkintoa ohjelmistokehityksessä Metropolia Ammattikorkeakoulussa.",
+            "Olen web- ja ohjelmistokehittäjä Helsingissä, jolla on käytännön työkokemus IT-tuesta, digitaalisista projekteista ja sisällönhallinnasta. Tällä hetkellä suoritan insinö[...]",
           passionate:
             "Olen intohimoinen tehokkaille ratkaisuille, selkeälle dokumentaatiolle, tiimityöskentelylle ja käyttäjien ja yritysten auttamiselle teknologian avulla.",
           location: "Sijainti",
@@ -233,7 +232,7 @@ const {
           fullStackDeveloper: "Full Stack -ohjelmistokehittäjä",
           alfonDigital: "Alfons Digital Oy",
           alfonDesc:
-            "Työskentelin erilaisissa WordPress-kehitystehtävissä rakentaen ja mukauttaen verkkosivustoja käyttämällä WordPressiä, Reactia, PHP:ta, Tailwind CSS:ää ja Gitia. Osallistuin sekä frontend- että backend-ominaisuuksiin ja hallitsin kehitystyöfloweja NPM:llä. Osoitin vahvaa itsenäisyyttä ja ongelmanratkaisukykyä.",
+            "Työskentelin erilaisissa WordPress-kehitystehtävissä rakentaen ja mukauttaen verkkosivustoja käyttämällä WordPressiä, Reactia, PHP:ta, Tailwind CSS:ää ja Gitia. Osallistuin[...]",
           itSupportRole: "IT-tuki (Digitalkkari)",
           helsinkiCity: "Helsingin kaupunki",
           itSupportDesc:
@@ -244,7 +243,7 @@ const {
             "Ammatillinen työ harjoittelustani Alfons Digitalissa sekä henkilökohtaiset ja ryhmäprojektit GitHubissa.",
           professionalWork: "Ammatillinen työ",
           professionalWorkDesc:
-            "Projektit Full Stack -kehittäjän harjoittelustani Alfons Digitalissa (tammikuu – toukokuu 2024). Rakensin WordPress-sivustoja React-komponenteilla, mukautetuilla postityypeillä ja moderneilla frontendin teknologioilla.",
+            "Projektit Full Stack -kehittäjän harjoittelustani Alfons Digitalissa (tammikuu – toukokuu 2024). Rakensin WordPress-sivustoja React-komponenteilla, mukautetuilla postityypeillä [...]",
           personalProjects: "Henkilökohtaiset projektit",
           groupProjects: "Ryhmäprojektit",
           additionalClients: "Muita asiakastyöitä",
@@ -293,12 +292,12 @@ const {
           languages: "Engelska / Finska",
           languagesLabel: "Språk",
           heroDesc:
-            "Helsingforsbaserad webbutvecklare och programvaruutvecklare med praktisk erfarenhet av IT-support, digitala lösningar och samarbetsprojekt. Studerar för närvarande programvaruutveckling vid Metropolia Yrkeshögskola, med fokus på praktisk programvaruproduktion och modern webbteknik. Jag lär mig alltid och letar efter sätt att bygga bättre lösningar.",
+            "Helsingforsbaserad webbutvecklare och programvaruutvecklare med praktisk erfarenhet av IT-support, digitala lösningar och samarbetsprojekt. Studerar för närvarande programvaruutve[...]",
 
           aboutTitle: "Om",
           whoIAm: "Vem jag är",
           whoIAmDesc:
-            "Jag är en webbutvecklare och programvaruutvecklare i Helsingfors med praktisk arbetslivserfarenhet inom IT-support, digitala projekt och innehållshantering. För närvarande slutför jag min Ingenjörsexamen i programvaruutveckling vid Metropolia Yrkeshögskola.",
+            "Jag är en webbutvecklare och programvaruutvecklare i Helsingfors med praktisk arbetslivserfarenhet inom IT-support, digitala projekt och innehållshantering. För närvarande slutf[...]",
           passionate:
             "Jag är passionerad om effektiva lösningar, tydlig dokumentation, teamarbete och att genuint hjälpa användare och företag med teknik.",
           location: "Plats",
@@ -335,7 +334,7 @@ const {
           fullStackDeveloper: "Full Stack-utvecklare",
           alfonDigital: "Alfons Digital Oy",
           alfonDesc:
-            "Arbetade med en mängd WordPress-utvecklingsuppgifter, byggde och anpassade webbplatser med WordPress, React, PHP, Tailwind CSS och Git. Bidrog till både frontend- och backend-funktioner och hanterade utvecklingsarbetsflöden med NPM. Visade stark oberoende och problemlösningsförmåga.",
+            "Arbetade med en mängd WordPress-utvecklingsuppgifter, byggde och anpassade webbplatser med WordPress, React, PHP, Tailwind CSS och Git. Bidrog till både frontend- och backend-funkt[...]",
           itSupportRole: "IT-support (Digitalkkari)",
           helsinkiCity: "Helsingin kaupunki",
           itSupportDesc:
@@ -346,7 +345,7 @@ const {
             "Professionellt arbete från min praktik på Alfons Digital, plus personliga och grupprojekt på GitHub.",
           professionalWork: "Professionellt arbete",
           professionalWorkDesc:
-            "Projekt från min praktik som full stack-utvecklare på Alfons Digital (januari – maj 2024). Byggde WordPress-webbplatser med React-komponenter, anpassade posttyper och modern frontend-teknik.",
+            "Projekt från min praktik som full stack-utvecklare på Alfons Digital (januari – maj 2024). Byggde WordPress-webbplatser med React-komponenter, anpassade posttyper och modern fron[...]",
           personalProjects: "Personliga projekt",
           groupProjects: "Grupprojekt",
           additionalClients: "Ytterligare klientarbete",
@@ -373,7 +372,6 @@ const {
         },
       };
 
-      // Default to English if nothing is set
       if (!localStorage.getItem("language")) {
         localStorage.setItem("language", "en");
       }

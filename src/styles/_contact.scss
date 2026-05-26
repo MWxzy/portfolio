@@ -1,0 +1,126 @@
+@import 'variables';
+@import 'mixins';
+
+/* CONTACT PAGE */
+
+.contact-page {
+  min-height: 100vh;
+  @include flex-center;
+  padding: 80px 20px;
+}
+
+.contact-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    font-size: $font-size-5xl;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  color: #c9d1d9;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.contact-box {
+  background: rgba(167, 139, 250, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: $radius-lg;
+  padding: 60px 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: $radius-lg;
+  padding: 30px 20px;
+  transition: all $transition-smooth;
+
+  &:hover {
+    background: rgba(167, 139, 250, 0.15);
+    border-color: rgba(167, 139, 250, 0.5);
+    transform: translateY(-5px);
+  }
+
+  h3 {
+    color: $color-accent-lighter;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .button-purple {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.contact-label {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-footer {
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
+  padding-top: 40px;
+  color: #c9d1d9;
+
+  p {
+    margin: 12px 0;
+    line-height: 1.6;
+  }
+}
+
+@include respond-to('md') {
+  .contact-page {
+    padding: 50px 20px;
+  }
+
+  .contact-box {
+    padding: 40px 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include respond-to('sm') {
+  .contact-page {
+    padding: 30px 15px;
+    min-height: auto;
+  }
+
+  .contact-container h1 {
+    font-size: 2rem;
+  }
+
+  .contact-box {
+    padding: 30px 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
