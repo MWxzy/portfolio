@@ -192,7 +192,7 @@ export const translations = {
     background: 'Bakgrund',
     languages: 'Engelska / Finska',
     languagesLabel: 'Språk',
-    heroDesc: 'Helsingforsbaserad webbutvecklare och programvaruutvecklare med praktisk erfarenhet av IT-support, digitala lösningar och samarbetsprojekt. Studerar för närvarande programvaruutve',
+    heroDesc: 'Webb- och mjukvaruutvecklare bosatt i Helsingfors med praktisk erfarenhet av IT-support, digitala lösningar och samarbetsprojekt. Studerar för närvarande mjukvaruutveckling vid Metropolia.',
     
     aboutTitle: 'Om',
     whoIAm: 'Vem jag är',
