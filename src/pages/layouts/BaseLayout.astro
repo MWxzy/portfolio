@@ -3,6 +3,7 @@ import Navbar from "../navbar.astro";
 import Footer from "../footer.astro";
 import '@/styles/main.scss';
 import '@/styles/theme.scss';
+import { translations } from '../../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
 
@@ -15,6 +16,8 @@ const {
   title = "Kasper Laine — Full-Stack Developer Portfolio",
   description = "Full-Stack Developer Portfolio. Experienced web developer specializing in React, WordPress, PHP, and modern web technologies. Based in Helsinki.",
 } = Astro.props;
+
+const translationsJson = JSON.stringify(translations);
 ---
 
 <html lang="en">
@@ -57,7 +60,9 @@ const {
 
     <Footer />
 
-    <script is:inline>
+    <script is:inline define:vars={{ translationsJson }}>
+      const translations = JSON.parse(translationsJson);
+
       if (!localStorage.getItem("language")) {
         localStorage.setItem("language", "en");
       }
@@ -69,8 +74,6 @@ const {
           const key = el.getAttribute("data-i18n");
           if (!key) return;
 
-          // Get translation from imported translations object
-          const translations = window.__translations || {};
           const value = translations[lang]?.[key];
 
           if (value) {
