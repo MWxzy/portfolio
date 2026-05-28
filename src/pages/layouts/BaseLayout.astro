@@ -91,5 +91,77 @@ const translationsJson = JSON.stringify(translations);
         applyTranslations();
       });
     </script>
+
+    <script is:inline>
+      class PortfolioAnimations {
+        constructor() {
+          this.init();
+        }
+        
+        init() {
+          this.setupScrollReveal();
+          this.setupParallax();
+          this.setupCardHovers();
+          this.observeNewCards();
+        }
+        
+        setupScrollReveal() {
+          const revealElements = document.querySelectorAll('.scroll-reveal');
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+          revealElements.forEach(el => observer.observe(el));
+        }
+        
+        setupParallax() {
+          const parallaxElements = document.querySelectorAll('[data-parallax]');
+          if (parallaxElements.length === 0) return;
+          window.addEventListener('scroll', () => {
+            parallaxElements.forEach(el => {
+              const speed = parseFloat(el.getAttribute('data-parallax') || '0.5');
+              el.style.transform = `translateY(${window.scrollY * speed}px)`;
+            });
+          });
+        }
+        
+        setupCardHovers() {
+          const cards = document.querySelectorAll('.pixel-card, .blog-card, .small-card, .large-card, .contact-card, .experience-item, .about-section');
+          cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+              card.classList.add('animate-border-glow');
+            });
+            card.addEventListener('mouseleave', () => {
+              card.classList.remove('animate-border-glow');
+            });
+          });
+        }
+
+        observeNewCards() {
+          const observer = new MutationObserver(() => {
+            this.setupCardHovers();
+          });
+          
+          const projectContainers = document.querySelectorAll(
+            '#workProjectsContainer, #personalProjectsContainer, #groupProjectsContainer'
+          );
+          
+          projectContainers.forEach(container => {
+            observer.observe(container, { childList: true, subtree: true });
+          });
+        }
+      }
+      
+      new PortfolioAnimations();
+      
+      window.addEventListener('languageChanged', () => {
+        setTimeout(() => {
+          new PortfolioAnimations();
+        }, 100);
+      });
+    </script>
   </body>
 </html>

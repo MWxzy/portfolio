@@ -1,3 +1,5 @@
+@use './variables' as vars;
+
 // FLEX UTILITIES
 @mixin flex-center {
   display: flex;
@@ -18,53 +20,73 @@
 
 // CARD STYLES
 @mixin card-base {
-  background: $color-card-bg;
-  border: 1px solid $color-border-lighter;
-  border-radius: $radius-md;
-  padding: $spacing-lg;
-  transition: border-color $transition-smooth, box-shadow $transition-smooth;
+  background: vars.$color-card-bg;
+  border: 1px solid vars.$color-border-lighter;
+  border-radius: vars.$radius-md;
+  padding: vars.$spacing-lg;
+  transition:
+    border-color vars.$transition-smooth,
+    box-shadow vars.$transition-smooth;
 }
 
 @mixin card-hover {
-  border-color: $color-accent;
-  box-shadow: 0 0 20px $color-shadow;
+  border-color: vars.$color-accent;
+  box-shadow: 0 0 20px vars.$color-shadow;
 }
 
 // BUTTON STYLES
 @mixin button-base {
   padding: 12px 24px;
   border: none;
-  border-radius: $radius-md;
+  border-radius: vars.$radius-md;
   text-decoration: none;
-  font-weight: $font-weight-bold;
+  font-weight: vars.$font-weight-bold;
   cursor: pointer;
-  transition: background $transition-smooth, box-shadow $transition-smooth;
+  transition:
+    background vars.$transition-smooth,
+    box-shadow vars.$transition-smooth;
   display: inline-block;
   font-size: 14px;
 }
 
 @mixin button-purple {
   @include button-base;
-  background: linear-gradient(90deg, $color-accent 0%, #6E36BC 100%);
+
+  background: linear-gradient(
+    90deg,
+    vars.$color-accent 0%,
+    #6E36BC 100%
+  );
+
   color: #fff;
-  box-shadow: 0 0 12px $color-shadow;
+  box-shadow: 0 0 12px vars.$color-shadow;
 
   &:hover {
-    background: linear-gradient(90deg, $color-accent-hover 0%, $color-accent-light 100%);
-    box-shadow: 0 0 24px $color-glow;
+    background: linear-gradient(
+      90deg,
+      vars.$color-accent-hover 0%,
+      vars.$color-accent-light 100%
+    );
+
+    box-shadow: 0 0 24px vars.$color-glow;
   }
 }
 
 @mixin button-ghost {
   @include button-base;
-  color: $color-text-primary;
-  border: 1px solid $color-shadow-light;
-  box-shadow: 0 0 10px $color-shadow-light;
+
+  color: vars.$color-text-primary;
+  border: 1px solid vars.$color-shadow-light;
+  box-shadow: 0 0 10px vars.$color-shadow-light;
   background: transparent;
-  transition: border-color $transition-smooth, box-shadow $transition-smooth, color $transition-smooth;
+
+  transition:
+    border-color vars.$transition-smooth,
+    box-shadow vars.$transition-smooth,
+    color vars.$transition-smooth;
 
   &:hover {
-    border-color: $color-accent-light;
+    border-color: vars.$color-accent-light;
     box-shadow: 0 0 18px rgba(207, 113, 252, 0.2);
     color: #A259F7;
   }
@@ -72,19 +94,23 @@
 
 // TEXT STYLES
 @mixin text-glitch {
-  color: $color-accent;
+  color: vars.$color-accent;
   letter-spacing: 0.09em;
-  font-size: $font-size-4xl;
+  font-size: vars.$font-size-4xl;
   position: relative;
   display: inline-block;
-  text-shadow: 0 0 8px $color-accent, 1px 2px 1px #fff2, -2px 4px rgba(59, 1, 77, 0.4);
+
+  text-shadow:
+    0 0 8px vars.$color-accent,
+    1px 2px 1px #fff2,
+    -2px 4px rgba(59, 1, 77, 0.4);
 }
 
 @mixin section-title {
-  font-family: $font-retro;
+  font-family: vars.$font-retro;
   letter-spacing: 0.1em;
-  margin-bottom: $spacing-xl;
-  color: $color-accent;
+  margin-bottom: vars.$spacing-xl;
+  color: vars.$color-accent;
   font-size: 28px;
   text-transform: uppercase;
 }
@@ -93,31 +119,31 @@
 @mixin grid-auto-fit($min-width: 200px) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
 }
 
 // RESPONSIVE UTILITIES
 @mixin respond-to($breakpoint) {
   @if $breakpoint == 'sm' {
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: vars.$breakpoint-sm) {
       @content;
     }
   } @else if $breakpoint == 'md' {
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: vars.$breakpoint-md) {
       @content;
     }
   } @else if $breakpoint == 'lg' {
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: vars.$breakpoint-lg) {
       @content;
     }
   } @else if $breakpoint == 'xl' {
-    @media (max-width: $breakpoint-xl) {
+    @media (max-width: vars.$breakpoint-xl) {
       @content;
     }
   }
 }
 
-// VISUALLY HIDDEN (Screen reader only)
+// VISUALLY HIDDEN
 @mixin sr-only {
   position: absolute;
   width: 1px;

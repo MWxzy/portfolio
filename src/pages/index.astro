@@ -6,29 +6,29 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Kasper Laine — Web Developer">
   <section class="hero">
-    <div class="hero-content">
-      <h1 class="glitch">Kasper Laine</h1>
-      <h2 class="hero-subtitle" data-i18n="webDeveloper"></h2>
-      <p class="hero-desc" data-i18n="heroDesc"></p>
-      <div class="hero-ctas">
-        <a href={`${base}projects`} class="button-purple" data-i18n="viewProjects"></a>
+    <div class="hero-content scroll-reveal">
+      <h1 class="glitch animate-slide-in">Kasper Laine</h1>
+      <h2 class="hero-subtitle animate-slide-in-up" data-i18n="webDeveloper"></h2>
+      <p class="hero-desc scroll-reveal" data-i18n="heroDesc"></p>
+      <div class="hero-ctas scroll-reveal">
+        <a href={`${base}projects`} class="button-purple hover-lift" data-i18n="viewProjects"></a>
         <a
           href={`${base}resume.pdf`}
           target="_blank"
           rel="noopener"
-          class="button-ghost"
+          class="button-ghost hover-lift"
           data-i18n="resume"></a>
         <a
           href="https://www.linkedin.com/in/kasper-laine-a4a131231/"
           target="_blank"
           rel="noopener"
-          class="button-ghost"
+          class="button-ghost hover-lift"
           data-i18n="linkedin"></a>
         <a
           href="https://github.com/LasperKaine"
           target="_blank"
           rel="noopener"
-          class="button-ghost"
+          class="button-ghost hover-lift"
           data-i18n="github"></a>
       </div>
     </div>
@@ -36,9 +36,9 @@ const base = import.meta.env.BASE_URL;
 
   <section class="quick-facts">
     <div class="facts-container">
-      <h2 class="section-title" data-i18n="quickFacts"></h2>
+      <h2 class="section-title scroll-reveal" data-i18n="quickFacts"></h2>
       <div class="facts-grid">
-        <div class="fact">
+        <div class="fact scroll-reveal hover-lift">
           <svg
             class="fact-icon"
             viewBox="0 0 24 24"
@@ -53,7 +53,7 @@ const base = import.meta.env.BASE_URL;
           <span class="fact-main" data-i18n="webDeveloper"></span>
           <span class="fact-sub" data-i18n="helsinki"></span>
         </div>
-        <div class="fact">
+        <div class="fact scroll-reveal hover-lift">
           <svg
             class="fact-icon"
             viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ const base = import.meta.env.BASE_URL;
           <span class="fact-main" data-i18n="bengStudent"></span>
           <span class="fact-sub" data-i18n="softwareProduction"></span>
         </div>
-        <div class="fact">
+        <div class="fact scroll-reveal hover-lift">
           <svg
             class="fact-icon"
             viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ const base = import.meta.env.BASE_URL;
           <span class="fact-main" data-i18n="itWeb"></span>
           <span class="fact-sub" data-i18n="background"></span>
         </div>
-        <div class="fact">
+        <div class="fact scroll-reveal hover-lift">
           <svg
             class="fact-icon"
             viewBox="0 0 24 24"
@@ -106,10 +106,10 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <section class="cta-section">
-    <div class="cta-box">
+    <div class="cta-box scroll-reveal hover-lift">
       <h2 data-i18n="letsWork"></h2>
       <p data-i18n="collaboration"></p>
-      <a href={`${base}contact`} class="button-purple" data-i18n="contactMe"></a>
+      <a href={`${base}contact`} class="button-purple hover-lift" data-i18n="contactMe"></a>
     </div>
   </section>
 </BaseLayout>
