@@ -15,16 +15,16 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
   description="Portfolio of professional and personal projects. WordPress development, React applications, and full-stack web development projects with live demos and source code."
 >
   <section class="projects-wrapper">
-    <header class="projects-header">
-      <h1 class="glitch" data-i18n="projectsTitle">PROJECTS</h1>
-      <p class="subtitle" data-i18n="projectsSubtitle">
+    <header class="projects-header scroll-reveal">
+      <h1 class="glitch animate-slide-in" data-i18n="projectsTitle">PROJECTS</h1>
+      <p class="subtitle animate-slide-in-up scroll-reveal" data-i18n="projectsSubtitle">
         Professional work from my internship at Alfons Digital, plus personal
         and group projects on GitHub.
       </p>
     </header>
 
     <!-- NAVIGATION MENU -->
-    <nav class="projects-nav">
+    <nav class="projects-nav scroll-reveal">
       <a
         href="#professional"
         class="nav-link active"
@@ -37,7 +37,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
     </nav>
 
     <!-- PROFESSIONAL WORK (FEATURED) -->
-    <section class="projects-section featured-section" id="professional">
+    <section class="projects-section featured-section scroll-reveal" id="professional">
       <h2 class="section-title" data-i18n="professionalWork">
         PROFESSIONAL WORK
       </h2>
@@ -49,8 +49,8 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
 
       <div class="project-grid large-cards" id="workProjectsContainer">
         {
-          workProjects.map((p: any) => (
-            <article class="large-card">
+          workProjects.map((p: any, idx: any) => (
+            <article class="large-card scroll-reveal hover-lift" style={`--animation-delay: ${idx * 0.1}s`}>
               {p.image && (
                 <div class="project-image">
                   <img
@@ -86,7 +86,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
                 ) : null}
 
                 <a
-                  class="button-ghost-projects"
+                  class="button-ghost-projects hover-lift"
                   href="/contact"
                   data-i18n="contactToDiscuss"
                 >
@@ -99,7 +99,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
       </div>
 
       <!-- ADDITIONAL CLIENTS -->
-      <div class="additional-clients">
+      <div class="additional-clients scroll-reveal">
         <h3 data-i18n="additionalClients">Additional Client Work</h3>
         <p data-i18n="continuedDevelopment">
           Continued development and maintenance on 12+ client projects:
@@ -117,14 +117,14 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
     </section>
 
     <!-- PERSONAL PROJECTS -->
-    <section class="projects-section" id="personal">
+    <section class="projects-section scroll-reveal" id="personal">
       <h2 class="section-title" data-i18n="personalProjects">
         PERSONAL PROJECTS
       </h2>
       <div class="project-grid small-cards" id="personalProjectsContainer">
         {
-          personalProjects.map((p: any) => (
-            <article class="small-card">
+          personalProjects.map((p: any, idx: any) => (
+            <article class="small-card scroll-reveal hover-lift" style={`--animation-delay: ${idx * 0.1}s`}>
               <h3 class="card-title">{p.name}</h3>
               <p class="card-desc">{p.desc}</p>
 
@@ -144,7 +144,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
 
               <div class="project-links">
                 <a
-                  class="button-purple"
+                  class="button-purple hover-lift"
                   href={p.url}
                   target="_blank"
                   rel="noopener"
@@ -156,7 +156,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
 
                 {p.liveUrl && (
                   <a
-                    class="button-purple"
+                    class="button-purple hover-lift"
                     href={p.liveUrl}
                     target="_blank"
                     rel="noopener"
@@ -174,12 +174,12 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
     </section>
 
     <!-- GROUP PROJECTS -->
-    <section class="projects-section" id="group">
+    <section class="projects-section scroll-reveal" id="group">
       <h2 class="section-title" data-i18n="groupProjects">GROUP PROJECTS</h2>
       <div class="project-grid small-cards" id="groupProjectsContainer">
         {
-          groupProjects.map((p: any) => (
-            <article class="small-card">
+          groupProjects.map((p: any, idx: any) => (
+            <article class="small-card scroll-reveal hover-lift" style={`--animation-delay: ${idx * 0.1}s`}>
               <h3 class="card-title">{p.name}</h3>
               <p class="card-desc">{p.desc}</p>
 
@@ -199,7 +199,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
 
               <div class="project-links">
                 <a
-                  class="button-purple"
+                  class="button-purple hover-lift"
                   href={p.url}
                   target="_blank"
                   rel="noopener"
@@ -211,7 +211,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
 
                 {p.liveUrl && (
                   <a
-                    class="button-purple"
+                    class="button-purple hover-lift"
                     href={p.liveUrl}
                     target="_blank"
                     rel="noopener"
@@ -240,7 +240,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
         workContainer.innerHTML = data.workProjects
           .map(
             (p) => `
-          <article class="large-card">
+          <article class="large-card scroll-reveal hover-lift">
             ${
               p.image
                 ? `
@@ -273,7 +273,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
                   : ""
               }
 
-              <a class="button-ghost-projects" href="${base}contact" data-i18n="contactToDiscuss">Contact to discuss</a>
+              <a class="button-ghost-projects hover-lift" href="${base}contact" data-i18n="contactToDiscuss">Contact to discuss</a>
             </div>
           </article>
         `,
@@ -289,7 +289,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
         personalContainer.innerHTML = data.personalProjects
           .map(
             (p) => `
-          <article class="small-card">
+          <article class="small-card scroll-reveal hover-lift">
             <h3 class="card-title">${p.name}</h3>
             <p class="card-desc">${p.desc}</p>
 
@@ -308,8 +308,8 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
             }
 
             <div class="project-links">
-              <a class="button-purple" href="${p.url}" target="_blank" rel="noopener" data-i18n="viewCode" aria-label="View ${p.name} code on GitHub (opens in new window)">View Code</a>
-              ${p.liveUrl ? `<a class="button-purple" href="${p.liveUrl}" target="_blank" rel="noopener" data-i18n="liveDemo" aria-label="View ${p.name} live demo (opens in new window)">Live Demo</a>` : ""}
+              <a class="button-purple hover-lift" href="${p.url}" target="_blank" rel="noopener" data-i18n="viewCode" aria-label="View ${p.name} code on GitHub (opens in new window)">View Code</a>
+              ${p.liveUrl ? `<a class="button-purple hover-lift" href="${p.liveUrl}" target="_blank" rel="noopener" data-i18n="liveDemo" aria-label="View ${p.name} live demo (opens in new window)">Live Demo</a>` : ""}
             </div>
           </article>
         `,
@@ -323,7 +323,7 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
         groupContainer.innerHTML = data.groupProjects
           .map(
             (p) => `
-          <article class="small-card">
+          <article class="small-card scroll-reveal hover-lift">
             <h3 class="card-title">${p.name}</h3>
             <p class="card-desc">${p.desc}</p>
 
@@ -342,8 +342,8 @@ const { workProjects, personalProjects, groupProjects, additionalClients } =
             }
 
             <div class="project-links">
-              <a class="button-purple" href="${p.url}" target="_blank" rel="noopener" data-i18n="viewCode" aria-label="View ${p.name} code on GitHub (opens in new window)">View Code</a>
-              ${p.liveUrl ? `<a class="button-purple" href="${p.liveUrl}" target="_blank" rel="noopener" data-i18n="liveDemo" aria-label="View ${p.name} live demo (opens in new window)">Live Demo</a>` : ""}
+              <a class="button-purple hover-lift" href="${p.url}" target="_blank" rel="noopener" data-i18n="viewCode" aria-label="View ${p.name} code on GitHub (opens in new window)">View Code</a>
+              ${p.liveUrl ? `<a class="button-purple hover-lift" href="${p.liveUrl}" target="_blank" rel="noopener" data-i18n="liveDemo" aria-label="View ${p.name} live demo (opens in new window)">Live Demo</a>` : ""}
             </div>
           </article>
         `,

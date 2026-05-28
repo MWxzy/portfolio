@@ -1,20 +1,24 @@
+// PIXEL ANIMATIONS FOR PORTFOLIO
+
+// Pixel Glow Animation
 @keyframes pixelGlow {
   0%, 100% {
     text-shadow:
-      0 0 5px $color-accent,
-      0 0 10px $color-accent,
-      0 0 20px $color-accent-hover,
-      0 0 30px $color-accent-light;
+      0 0 5px #a855f7,
+      0 0 10px #a855f7,
+      0 0 20px #b159e1,
+      0 0 30px #cf71fc;
   }
   50% {
     text-shadow:
-      0 0 10px $color-accent-light,
-      0 0 20px $color-accent-light,
-      0 0 30px $color-glow,
-      0 0 40px $color-accent;
+      0 0 10px #cf71fc,
+      0 0 20px #cf71fc,
+      0 0 30px #f3aaff,
+      0 0 40px #a855f7;
   }
 }
 
+// Pixel Slide In
 @keyframes pixelSlideIn {
   0% {
     opacity: 0;
@@ -26,6 +30,7 @@
   }
 }
 
+// Pixel Slide In Up
 @keyframes pixelSlideInUp {
   0% {
     opacity: 0;
@@ -37,6 +42,7 @@
   }
 }
 
+// Pixel Bounce
 @keyframes pixelBounce {
   0%, 100% {
     transform: translateY(0);
@@ -52,6 +58,7 @@
   }
 }
 
+// Pixel Pop In
 @keyframes pixelPopIn {
   0% {
     opacity: 0;
@@ -63,6 +70,7 @@
   }
 }
 
+// Pixel Float
 @keyframes pixelFloat {
   0%, 100% {
     transform: translateY(0px);
@@ -72,15 +80,17 @@
   }
 }
 
+// Pixel Pulse
 @keyframes pixelPulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba($color-accent, 0.7);
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba($color-accent, 0);
+    box-shadow: 0 0 0 10px rgba(168, 85, 247, 0);
   }
 }
 
+// Pixel Flicker
 @keyframes pixelFlicker {
   0% {
     opacity: 1;
@@ -105,6 +115,7 @@
   }
 }
 
+// Pixel Scan Lines (retro effect)
 @keyframes pixelScanLines {
   0% {
     background-position: 0 0;
@@ -114,17 +125,19 @@
   }
 }
 
+// Pixel Border Glow
 @keyframes pixelBorderGlow {
   0%, 100% {
-    border-color: $color-accent;
-    box-shadow: 0 0 10px rgba($color-accent, 0.5);
+    border-color: #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
   }
   50% {
-    border-color: $color-accent-light;
-    box-shadow: 0 0 20px rgba($color-accent-light, 0.8);
+    border-color: #cf71fc;
+    box-shadow: 0 0 20px rgba(207, 113, 252, 0.8);
   }
 }
 
+// UTILITY ANIMATION CLASSES
 
 .animate-glow {
   animation: pixelGlow 2s ease-in-out infinite;
@@ -162,6 +175,7 @@
   animation: pixelBorderGlow 2s ease-in-out infinite;
 }
 
+// SCROLL REVEAL ANIMATIONS
 
 .scroll-reveal {
   opacity: 0;
@@ -185,6 +199,7 @@
   }
 }
 
+// PARALLAX SCROLL EFFECT
 .parallax-section {
   position: relative;
   overflow: hidden;
@@ -194,23 +209,25 @@
   }
 }
 
+// PIXEL CARD HOVER EFFECTS
 .pixel-card {
   position: relative;
-  border: 2px solid $color-border-lighter;
-  transition: all $transition-smooth;
+  border: 2px solid #9D50FF66;
+  transition: all 0.3s ease;
 
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(45deg, transparent, rgba($color-accent, 0.1), transparent);
+    background: linear-gradient(45deg, transparent, rgba(168, 85, 247, 0.1), transparent);
     opacity: 0;
-    transition: opacity $transition-smooth;
+    transition: opacity 0.3s ease;
     pointer-events: none;
   }
 
   &:hover {
-    @include card-hover;
+    border-color: #a855f7;
+    box-shadow: 0 0 20px rgba(158, 80, 255, 0.4);
 
     &::before {
       opacity: 1;
@@ -218,6 +235,7 @@
   }
 }
 
+// ANIMATED UNDERLINE
 .underline-animated {
   position: relative;
   display: inline-block;
@@ -229,10 +247,10 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, $color-accent, $color-accent-light);
+    background: linear-gradient(90deg, #a855f7, #cf71fc);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform $transition-smooth;
+    transition: transform 0.3s ease;
   }
 
   &:hover::after {
@@ -241,6 +259,7 @@
   }
 }
 
+// BUTTON ANIMATIONS
 .button-animated {
   position: relative;
   overflow: hidden;
@@ -277,6 +296,7 @@
   }
 }
 
+// FADE IN ANIMATIONS
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 
@@ -290,6 +310,7 @@
   }
 }
 
+// SECTION ENTRANCE ANIMATIONS
 .section-entrance {
   &.from-left {
     animation: pixelSlideIn 0.8s ease-out forwards;
@@ -309,26 +330,28 @@
   }
 }
 
+// HOVER LIFT EFFECT
 .hover-lift {
-  transition: transform $transition-smooth, box-shadow $transition-smooth;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba($color-accent, 0.2);
+    box-shadow: 0 12px 24px rgba(168, 85, 247, 0.2);
   }
 }
 
 // GLOW ON HOVER
 .glow-on-hover {
-  transition: box-shadow $transition-smooth;
+  transition: box-shadow 0.3s ease;
 
   &:hover {
-    box-shadow: 0 0 30px rgba($color-accent, 0.6);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
   }
 }
 
+// ROTATE ON HOVER
 .rotate-on-hover {
-  transition: transform $transition-smooth;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: rotate(2deg) scale(1.02);

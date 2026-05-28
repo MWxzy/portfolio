@@ -8,9 +8,9 @@ import BaseLayout from "./layouts/BaseLayout.astro";
 >
   <section class="about-page">
     <div class="about-container">
-      <h1 class="glitch" data-i18n="aboutTitle"></h1>
+      <h1 class="glitch animate-slide-in scroll-reveal" data-i18n="aboutTitle"></h1>
 
-      <section class="about-section">
+      <section class="about-section scroll-reveal hover-lift">
         <h2 data-i18n="whoIAm"></h2>
         <p data-i18n="whoIAmDesc"></p>
         <p data-i18n="passionate"></p>
@@ -21,7 +21,7 @@ import BaseLayout from "./layouts/BaseLayout.astro";
         </p>
       </section>
 
-      <section class="about-section">
+      <section class="about-section scroll-reveal hover-lift">
         <h2 data-i18n="skillset"></h2>
         <ul>
           <li><strong data-i18n="frontendDevelopment"></strong>: <span data-i18n="frontendTechs"></span></li>
@@ -35,54 +35,54 @@ import BaseLayout from "./layouts/BaseLayout.astro";
         </ul>
       </section>
 
-      <section class="about-section">
+      <section class="about-section scroll-reveal hover-lift">
         <h2 data-i18n="education"></h2>
-        <div class="experience-item">
+        <div class="experience-item scroll-reveal">
           <h3 data-i18n="bachelorEngineering"></h3>
           <p class="exp-company" data-i18n="metropolia"></p>
         </div>
-        <div class="experience-item">
+        <div class="experience-item scroll-reveal">
           <h3 data-i18n="vocationalQualification"></h3>
           <p class="exp-company" data-i18n="businessCollege"></p>
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section scroll-reveal hover-lift">
         <h2 data-i18n="professionalExperience"></h2>
-        <div class="experience-item">
+        <div class="experience-item scroll-reveal">
           <h3 data-i18n="fullStackDeveloper"></h3>
           <p class="exp-company" data-i18n="alfonDigital"></p>
           <p class="exp-desc" data-i18n="alfonDesc"></p>
         </div>
-        <div class="experience-item">
+        <div class="experience-item scroll-reveal">
           <h3 data-i18n="itSupportRole"></h3>
           <p class="exp-company" data-i18n="helsinkiCity"></p>
           <p class="exp-desc" data-i18n="itSupportDesc"></p>
         </div>
       </section>
 
-      <section class="about-section cta-section">
+      <section class="about-section cta-section scroll-reveal hover-lift">
         <h2 data-i18n="contact"></h2>
         <div class="connect-buttons">
           <a
             href="https://github.com/LasperKaine"
             target="_blank"
             rel="noopener"
-            class="button-purple"
+            class="button-purple hover-lift"
             data-i18n="github"
             aria-label="Visit GitHub profile (opens in new window)"></a>
           <a
             href="https://linkedin.com/in/kasper-laine-4a131231"
             target="_blank"
             rel="noopener"
-            class="button-purple"
+            class="button-purple hover-lift"
             data-i18n="linkedin"
             aria-label="Visit LinkedIn profile (opens in new window)"></a>
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener"
-            class="button-ghost"
+            class="button-ghost hover-lift"
             data-i18n="resume"
             aria-label="Download resume (opens in new window)"></a>
         </div>
