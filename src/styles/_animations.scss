@@ -1,0 +1,336 @@
+@keyframes pixelGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px $color-accent,
+      0 0 10px $color-accent,
+      0 0 20px $color-accent-hover,
+      0 0 30px $color-accent-light;
+  }
+  50% {
+    text-shadow:
+      0 0 10px $color-accent-light,
+      0 0 20px $color-accent-light,
+      0 0 30px $color-glow,
+      0 0 40px $color-accent;
+  }
+}
+
+@keyframes pixelSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pixelSlideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pixelBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pixelPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pixelFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pixelPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba($color-accent, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba($color-accent, 0);
+  }
+}
+
+@keyframes pixelFlicker {
+  0% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  24% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 1;
+  }
+  64% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pixelScanLines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 4px;
+  }
+}
+
+@keyframes pixelBorderGlow {
+  0%, 100% {
+    border-color: $color-accent;
+    box-shadow: 0 0 10px rgba($color-accent, 0.5);
+  }
+  50% {
+    border-color: $color-accent-light;
+    box-shadow: 0 0 20px rgba($color-accent-light, 0.8);
+  }
+}
+
+
+.animate-glow {
+  animation: pixelGlow 2s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: pixelSlideIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: pixelSlideInUp 0.6s ease-out forwards;
+}
+
+.animate-bounce {
+  animation: pixelBounce 0.6s ease-out;
+}
+
+.animate-pop-in {
+  animation: pixelPopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-float {
+  animation: pixelFloat 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pixelPulse 2s infinite;
+}
+
+.animate-flicker {
+  animation: pixelFlicker 0.15s infinite;
+}
+
+.animate-border-glow {
+  animation: pixelBorderGlow 2s ease-in-out infinite;
+}
+
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Staggered animation delays
+@for $i from 1 through 10 {
+  .scroll-reveal:nth-child(#{$i}) {
+    transition-delay: (($i - 1) * 0.1s);
+
+    &.visible {
+      animation: pixelSlideInUp 0.6s ease-out ($i - 1) * 0.1s both;
+    }
+  }
+}
+
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+
+  &[data-parallax] {
+    will-change: transform;
+  }
+}
+
+.pixel-card {
+  position: relative;
+  border: 2px solid $color-border-lighter;
+  transition: all $transition-smooth;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent, rgba($color-accent, 0.1), transparent);
+    opacity: 0;
+    transition: opacity $transition-smooth;
+    pointer-events: none;
+  }
+
+  &:hover {
+    @include card-hover;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.underline-animated {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, $color-accent, $color-accent-light);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $transition-smooth;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.button-animated {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+// TEXT REVEAL ANIMATIONS
+.text-reveal {
+  position: relative;
+
+  span {
+    display: inline-block;
+    animation: pixelSlideInUp 0.6s ease-out backwards;
+  }
+
+  @for $i from 1 through 20 {
+    span:nth-child(#{$i}) {
+      animation-delay: ($i * 0.05s);
+    }
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.section-entrance {
+  &.from-left {
+    animation: pixelSlideIn 0.8s ease-out forwards;
+  }
+
+  &.from-right {
+    animation: pixelSlideIn 0.8s ease-out forwards;
+    animation-direction: reverse;
+  }
+
+  &.from-bottom {
+    animation: pixelSlideInUp 0.8s ease-out forwards;
+  }
+
+  &.scale-in {
+    animation: pixelPopIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+}
+
+.hover-lift {
+  transition: transform $transition-smooth, box-shadow $transition-smooth;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba($color-accent, 0.2);
+  }
+}
+
+// GLOW ON HOVER
+.glow-on-hover {
+  transition: box-shadow $transition-smooth;
+
+  &:hover {
+    box-shadow: 0 0 30px rgba($color-accent, 0.6);
+  }
+}
+
+.rotate-on-hover {
+  transition: transform $transition-smooth;
+
+  &:hover {
+    transform: rotate(2deg) scale(1.02);
+  }
+}
