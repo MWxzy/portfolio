@@ -1,40 +1,20 @@
 # Kasper Laine's Portfolio
 
-Welcome to my personal portfolio website!  
-This site is a curated collection of my projects, experiences, and skills as a developer and creative professional.
+Welcome to my personal portfolio website! This site is a curated collection of my projects, experiences, and skills as a developer and creative professional.
 
 ---
 
 ## 🧑‍💻 About Me
 
-Hi! I’m **Kasper Laine** – a passionate web developer who loves building beautiful, functional, and accessible digital experiences.
+Hi! I'm **Kasper Laine** – a passionate web developer who loves building beautiful, functional, and accessible digital experiences.
 
-- **Location:** [Helsinki]
+- **Location:** Helsinki
 - **Expertise:** Fullstack Development, UI Engineering, Responsive Design
 - **Interests:** Web technologies, creative coding, and turning ideas into reality
 
 ---
 
-## What’s Inside
-
-- **Project Gallery** – Real-world projects with links, descriptions, and code.
-- **Skills & Tools** – Overview of my technical stack and proficiencies.
-- **About Section** – Learn who I am as a professional.
-- **Resume & Contact** – Download my resume or get in touch!
-
----
-
-## Tech Stack
-
-This website is built using:
-
-- **[Astro](https://astro.build/):** Modern framework for fast static sites
-- **CSS:** Clean, custom styles for each section
-- **JavaScript:** Interactive components for an enhanced user experience
-
----
-
-## Live Demo
+## 🌐 Live Demo
 
 Check out the portfolio live:
 
@@ -43,34 +23,37 @@ Check out the portfolio live:
 
 ---
 
-## Run Locally
+## ✨ Features
 
-To clone and run this portfolio on your machine:
+- 🎨 Fully responsive design
+- ⚡ Fast performance (optimized Astro build)
+- ♿ Accessible and user-friendly
+- 📱 Mobile-first approach
+- 🎯 Project showcase with live links
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| **Framework** | [Astro](https://astro.build/) |
+| **Language** | TypeScript |
+| **Styling** | SCSS |
+| **Deployment** | Vercel, GitHub Pages |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm or pnpm
+
+### Installation & Development
 
 ```bash
 git clone https://github.com/LasperKaine/portfolio.git
 cd portfolio
 npm install
 npm run dev
-```
-
-Then open [http://localhost:4321](http://localhost:4321) in your browser.
-
----
-
-## Customization
-
-Feel free to fork this repo and use it as your own portfolio!  
-Change images, text, tech stack, and add your own projects in the `/src` folder.
-
----
-
-## Contact
-
-- **Email:** [kasperlaine05@gmail.com]
-- **LinkedIn:** [[(https://www.linkedin.com/in/kasper-laine-a4a131231/](https://www.linkedin.com/in/kasper-laine-a4a131231/)]
-- **Resume:** [[https://kasper-laine-portfolio.vercel.app/resume.pdf](https://kasper-laine-portfolio.vercel.app/resume.pdf)]
-
----
-
-_Thanks for visiting my portfolio!_
