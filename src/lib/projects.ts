@@ -151,7 +151,7 @@ export const projectsData = {
       {
         name: "UI Campaign Patterns",
         company: "Alfons Digital (8.1.2024 - 22.5.2024)",
-        desc: "Rakensin uudelleenkäytettäviä WordPress-malleja dynaamisille case-esittelysivuille. Suunnittelin joustavia komponentteja asiakasprojektien käynnistämisen virtaviivaistamiseksi.",
+        desc: "Rakensin uudelleenkäytettäviä WordPress-malleja dynaamisille case-esittelysivuille.",
         image: "images/projects/ui-campaign-patterns.jpg",
         tech: ["WordPress", "CSS"],
         highlights: [
@@ -162,7 +162,7 @@ export const projectsData = {
         ],
       },
       {
-        name: "HSKK Marketing Site",
+name: "HSKK Marketing Site",
         company: "Alfons Digital",
         desc: "Markkinointiverkkosivusto Helsingin seudun kauppakamarin palveluille mukautetulla asettelulla ja optimoidulla käyttäjäkokemuksella.",
         image: "images/projects/hskk-marketing.jpg",
@@ -177,7 +177,7 @@ export const projectsData = {
       {
         name: "Future School",
         company: "Alfons Digital",
-        desc: "Tarinaperustainen kysely verkkosivusto Lasten ja nuortensäätiölle. Interaktiiviset React-komponentit ohjaavat käyttäjiä tarinapohjaisen kokemuksen läpi ja keräävät lomakedataa.",
+        desc: "Tarinaperustainen kysely verkkosivusto Lasten ja nuortensäätiölle. Interaktiiviset React-komponentit ohjaavat käyttäjiä tarinapohjaisen kokemuksen läpi ja keräävät lomaketietoja.",
         image: "images/projects/future-school.jpg",
         tech: ["React", "WordPress"],
         highlights: [
@@ -190,7 +190,7 @@ export const projectsData = {
       {
         name: "Impact Library & Network",
         company: "Alfons Digital",
-        desc: "Kaksiosaisessa projektissa on työpajojen hakemisto (Impact Library) ja interaktiivinen kartta (Impact Network) mukautetuilla postityypeillä.",
+        desc: "Kaksiosaisessa projektissa on työpajojen hakemisto (Impact Library) ja interaktiivinen kartta (Impact Network) mukautetuilla post tyypeillä.",
         image: "images/projects/impact-library-network.jpg",
         tech: ["React", "WordPress", "PHP", "JavaScript"],
         highlights: [
