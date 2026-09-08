@@ -58,7 +58,7 @@ export const projectsData = {
       {
         name: "Portfolio",
         desc: "Personal portfolio website built with Astro showcasing projects, experience, and skills. Modern, performant, and fully responsive.",
-        url: "https://github.com/LasperKaine/portfolio",
+        url: "https://github.com/MWxzy/portfolio",
         tech: ["Astro", "CSS", "JavaScript", "TypeScript"],
         highlights: [
           "Static site generation with Astro",
@@ -70,7 +70,7 @@ export const projectsData = {
       {
         name: "Resume Builder",
         desc: "A resume/CV builder application that allows users to create and customize their own resumes using a JSON-based format.",
-        url: "https://github.com/LasperKaine/resume-builder",
+        url: "https://github.com/MWxzy/resume-builder",
         tech: ["TypeScript", "React", "Vite"],
         highlights: [
           "JSON-based resume data format",
@@ -82,7 +82,7 @@ export const projectsData = {
       {
         name: "UniAteriat",
         desc: "A web application project showcasing modern JavaScript practices and interactive UI components.",
-        url: "https://github.com/LasperKaine/web-sovellus",
+        url: "https://github.com/MWxzy/web-sovellus",
         liveUrl: "https://users.metropolia.fi/~kaspelai/web-app/",
         tech: ["JavaScript", "CSS", "HTML"],
         highlights: [
@@ -97,7 +97,7 @@ export const projectsData = {
       {
         name: "City Sushi",
         desc: "A restaurant website for City Sushi featuring menu, location, and ordering information.",
-        url: "https://github.com/LasperKaine/citysushi-react",
+        url: "https://github.com/MWxzy/citysushi-react",
         liveUrl: "https://citysushi-frontend.vercel.app/",
         tech: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
         highlights: [
@@ -109,7 +109,7 @@ export const projectsData = {
       {
         name: "University Admission Queue Simulation",
         desc: "University admission queue system simulation project. Demonstrates queue data structures and algorithms for processing student admissions.",
-        url: "https://github.com/LasperKaine/University-Admission-Queue-System-Simulation",
+        url: "https://github.com/MWxzy/University-Admission-Queue-System-Simulation",
         tech: ["Java", "CSS"],
         highlights: [
           "Queue data structure implementation",
@@ -205,7 +205,7 @@ name: "HSKK Marketing Site",
       {
         name: "Portfolio",
         desc: "Henkilökohtainen portfolioverkkosivusto rakennettu Astrolla, joka esittelee projekteja, kokemusta ja taitoja. Moderni, suorituskykyinen ja täysin responsiivinen.",
-        url: "https://github.com/LasperKaine/portfolio",
+        url: "https://github.com/MWxzy/portfolio",
         tech: ["Astro", "CSS", "JavaScript", "TypeScript"],
         highlights: [
           "Staattinen sivugenerointi Astrolla",
@@ -217,7 +217,7 @@ name: "HSKK Marketing Site",
       {
         name: "Resume Builder",
         desc: "Ansioluettelo/CV-rakentajasovellus, jonka avulla käyttäjät voivat luoda ja mukauttaa omia ansioluetteloitaan JSON-pohjaisella muodolla.",
-        url: "https://github.com/LasperKaine/resume-builder",
+        url: "https://github.com/MWxzy/resume-builder",
         tech: ["TypeScript", "React", "Vite"],
         highlights: [
           "JSON-pohjainen ansioluettelon tietomuoto",
@@ -229,7 +229,7 @@ name: "HSKK Marketing Site",
       {
         name: "UniAteriat",
         desc: "Verkkosovellusprojekti, joka esittelee nykyaikaisia JavaScript-käytäntöjä ja interaktiivisia käyttöliittymäkomponentteja.",
-        url: "https://github.com/LasperKaine/web-sovellus",
+        url: "https://github.com/MWxzy/web-sovellus",
         liveUrl: "https://users.metropolia.fi/~kaspelai/web-app/",
         tech: ["JavaScript", "CSS", "HTML"],
         highlights: [
@@ -243,7 +243,7 @@ name: "HSKK Marketing Site",
       {
         name: "City Sushi",
         desc: "City Sushin ravintolaverkkosivusto, jossa on valikko, sijainti ja tilaustieto.",
-        url: "https://github.com/LasperKaine/citysushi-react",
+        url: "https://github.com/MWxzy/citysushi-react",
         liveUrl: "https://citysushi-frontend.vercel.app/",
         tech: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
         highlights: [
@@ -255,7 +255,7 @@ name: "HSKK Marketing Site",
       {
         name: "University Admission Queue Simulation",
         desc: "Yliopiston hakujonosimulaatioprojekti. Havainnollistaa jonodatarakenteita ja algoritmeja opiskelijavalintojen käsittelyssä.",
-        url: "https://github.com/LasperKaine/University-Admission-Queue-System-Simulation",
+        url: "https://github.com/MWxzy/University-Admission-Queue-System-Simulation",
         tech: ["Java", "CSS"],
         highlights: [
           "Jonotietorakenteen toteutus",
@@ -351,7 +351,7 @@ name: "HSKK Marketing Site",
       {
         name: "Portfolio",
         desc: "Personlig portföljwebbplats byggd med Astro som showcasar projekt, erfarenhet och färdigheter. Modern, prestandakraftig och helt responsiv.",
-        url: "https://github.com/LasperKaine/portfolio",
+        url: "https://github.com/MWxzy/portfolio",
         tech: ["Astro", "CSS", "JavaScript", "TypeScript"],
         highlights: [
           "Statisk webbplatsgenerering med Astro",
@@ -363,7 +363,7 @@ name: "HSKK Marketing Site",
       {
         name: "Resume Builder",
         desc: "En CV-byggarapplikation som gör det möjligt för användare att skapa och anpassa sina egna CV:n med ett JSON-baserat format.",
-        url: "https://github.com/LasperKaine/resume-builder",
+        url: "https://github.com/MWxzy/resume-builder",
         tech: ["TypeScript", "React", "Vite"],
         highlights: [
           "JSON-baserat CV-dataformat",
@@ -375,7 +375,7 @@ name: "HSKK Marketing Site",
       {
         name: "UniAteriat",
         desc: "Ett webbapplikationsprojekt som visar moderna JavaScript-metoder och interaktiva gränssnittskomponenter.",
-        url: "https://github.com/LasperKaine/web-sovellus",
+        url: "https://github.com/MWxzy/web-sovellus",
         liveUrl: "https://users.metropolia.fi/~kaspelai/web-app/",
         tech: ["JavaScript", "CSS", "HTML"],
         highlights: [
@@ -389,7 +389,7 @@ name: "HSKK Marketing Site",
       {
         name: "City Sushi",
         desc: "En restaurangwebbplats för City Sushi med meny, plats och beställningsinformation.",
-        url: "https://github.com/LasperKaine/citysushi-react",
+        url: "https://github.com/MWxzy/citysushi-react",
         liveUrl: "https://citysushi-frontend.vercel.app/",
         tech: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
         highlights: [
@@ -401,7 +401,7 @@ name: "HSKK Marketing Site",
       {
         name: "University Admission Queue Simulation",
         desc: "Simuleringsprojekt för universitetsadmissionskö. Visar köadatastrukturer och algoritmer för hantering av studentadmissioner.",
-        url: "https://github.com/LasperKaine/University-Admission-Queue-System-Simulation",
+        url: "https://github.com/MWxzy/University-Admission-Queue-System-Simulation",
         tech: ["Java", "CSS"],
         highlights: [
           "Köad-datastruktur-implementering",
