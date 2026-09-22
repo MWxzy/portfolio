@@ -91,7 +91,18 @@ export const projectsData = {
           "CSS animations",
         ],
       },
-      
+      {
+        name: "Breakframe",
+        desc: "A responsive device preview tool that lets you inspect how websites look across desktop, laptop, tablet, and mobile screen sizes.",
+        url: "https://github.com/MWxzy/breakframe",
+        liveUrl: "",
+        tech: ["Vue", "TypeScript", "CSS", "Vite"],
+        highlights: [
+          "Responsive device previews",
+          "Interactive hover and focus states",
+          "Desktop, laptop, tablet, and mobile layouts",
+        ],
+      },
     ],
     groupProjects: [
       {
@@ -236,6 +247,18 @@ name: "HSKK Marketing Site",
           "Interaktiiviset komponentit",
           "Moderni JavaScript ES6+",
           "CSS-animaatiot",
+        ],
+      },
+      {
+        name: "Breakframe",
+        desc: "Responsiivinen laitteiden esikatselusovellus, jonka avulla voit tarkastella, miltä verkkosivusto näyttää työpöydällä, kannettavalla tietokoneella, tabletilla ja mobiililaitteella.",
+        url: "https://github.com/MWxzy/breakframe",
+        liveUrl: "",
+        tech: ["Vue", "TypeScript", "CSS", "Vite"],
+        highlights: [
+          "Responsiiviset laite-esikatselut",
+          "Interaktiiviset hover- ja fokusointitilat",
+          "Työpöytä-, kannettava-, tabletti- ja mobiilinäkymät",
         ],
       },
     ],
@@ -384,6 +407,18 @@ name: "HSKK Marketing Site",
           "CSS-animationer",
         ],
       },
+      {
+        name: "Breakframe",
+        desc: "Ett responsivt verktyg för enhetsförhandsvisning som låter dig se hur en webbplats ser ut på dator, bärbar dator, surfplatta och mobil.",
+        url: "https://github.com/MWxzy/breakframe",
+        liveUrl: "",
+        tech: ["Vue", "TypeScript", "CSS", "Vite"],
+        highlights: [
+          "Responsiva enhetsförhandsvisningar",
+          "Interaktiva hover- och fokuseringslägen",
+          "Vyer för dator, bärbar dator, surfplatta och mobil",
+        ],
+      }, 
     ],
     groupProjects: [
       {
